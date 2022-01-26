@@ -9,14 +9,10 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, './public/main.js'))
   })
 
-app.get('/css', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/main.js'))
-  })
 
 app.use(express.json());
 
 app.use('/js', express.static(path.join(__dirname, 'public/main.js')));
-app.use('/css', express.static(path.join(__dirname, 'public/main.js')));
 
 
 app.listen(port, () => {
