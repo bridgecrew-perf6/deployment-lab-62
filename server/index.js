@@ -5,17 +5,11 @@ const port = process.env.PORT;
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'));
-})
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../styles.css'));
-})
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/main.js'))
+  })
 
 app.use(express.json());
-
-app.use('/js', express.static(path.join(__dirname, 'public/main.js')));
 
 
 app.listen(port, () => {
