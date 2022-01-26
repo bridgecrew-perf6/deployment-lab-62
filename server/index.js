@@ -9,10 +9,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
   })
 
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../styles.css'))
+  })
+
 
 app.use(express.json());
 
-app.use('/css', express.static(path.join(__dirname, '../styles.css')));
+//app.use('/css', express.static(path.join(__dirname, '../styles.css')));
 
 
 
