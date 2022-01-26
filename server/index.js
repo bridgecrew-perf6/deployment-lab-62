@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use('/js', express.static(path.join(__dirname, 'public/main.js')));
 
-app.use('../styles.css', express.static(path.join(__dirname, 'public/main.js')));
+app.use('/styles.css', express.static(path.join(__dirname, 'public/main.js')));
 
 app.listen(port, () => {
     console.log('Running on port ' + port);
