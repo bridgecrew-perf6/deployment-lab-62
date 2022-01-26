@@ -9,16 +9,13 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
   })
 
-app.get('/js', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../styles.css'))
   })
-
 
 app.use(express.json());
 
 //app.use('/css', express.static(path.join(__dirname, '../styles.css')));
-
-
 
 app.listen(port, () => {
     console.log('Running on port ' + port);
