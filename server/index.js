@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 
-app.use('/css', express.static(path.join(__dirname, 'styles.css')));
+app.use('/css', express.static(path.join(__dirname, '../styles.css')));
 
 
 
